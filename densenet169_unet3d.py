@@ -20,12 +20,12 @@ class DecoderBlock(nn.Module):
         return self.conv(x)
 
 class Densenet_Unet3D(nn.Module):
-    def __init__(self, in_channel=1, out_channel=1, num_filters=32):
+    def __init__(self, in_channel=1, out_channel=1, num_filters=32, norm_layer='bn'):
         super().__init__()
 
         self.out_channel = out_channel
 
-        encoder = densenet3d169(in_channel=in_channel)
+        encoder = densenet3d169(in_channel=in_channel, norm_layer='bn')
 
         self.conv1 = encoder.conv1 # 64
         enc = encoder.features
