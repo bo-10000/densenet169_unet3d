@@ -1,4 +1,4 @@
-This is densenet169-based unet implementation in PyTorch.
+This is PyTorch implementation of Densenet-169 based 3D U-net implementation in PyTorch.
  
 **Usage:**
 
