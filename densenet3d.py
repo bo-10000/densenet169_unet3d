@@ -64,7 +64,7 @@ class DenseNet(nn.Module):
         if norm_layer == 'bn':
             self.norm_layer = nn.BatchNorm3d
         elif norm_layer == 'in':
-            self.norm_layer == nn.InstanceNorm3d
+            self.norm_layer = nn.InstanceNorm3d
         
         self.growth_rate = growth_rate
 
