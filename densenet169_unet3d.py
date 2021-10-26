@@ -25,7 +25,7 @@ class Densenet_Unet3D(nn.Module):
 
         self.out_channel = out_channel
 
-        encoder = densenet3d169(in_channel=in_channel, norm_layer='bn')
+        encoder = densenet3d169(in_channel=in_channel, norm_layer=norm_layer)
 
         self.conv1 = encoder.conv1 # 64
         enc = encoder.features
